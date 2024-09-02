@@ -1,0 +1,225 @@
+main {
+    margin: 1rem 10rem;
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.349);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    overflow: hidden;
+    min-height: calc(100vh - 2rem);
+    position: relative;
+}
+
+.loader {
+    margin: 1rem auto;
+}
+
+section.head {
+    background: rgba(255, 255, 255, 0.486);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(7.9px);
+    border-bottom: .2rem solid var(--primary-color);
+    padding: 1rem 1rem;
+}
+
+section.head form {
+    display: flex;
+}
+
+form .search {
+    flex-basis: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.head form input[type='text'] {
+    border: none;
+    background: transparent;
+    caret-color: var(--primary-color);
+    color: var(--primary-color);
+    font-size: 1.9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+section.head form input[type='text']::placeholder {
+    color: var(--primary-color);
+}
+
+
+section.head form input:active,
+section.head form input:focus {
+    outline: none;
+}
+
+section.head form .unit {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 30%;
+    border-left: .2rem solid var(--primary-color);
+}
+
+section.head form .unit label {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+}
+
+.unit input[type='radio'] {
+    cursor: pointer;
+    margin-right: .5rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+section.head form button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    margin-right: 1rem;
+}
+
+section.head form button .icon {
+    color: var(--primary-color);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+}
+
+.content .city-weather {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .city-weather .general {
+    flex-basis: 50%;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .city-weather .general .title {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+
+.content .city-weather .general .temp {
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.content .city-weather .general p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-left: 1rem;
+    letter-spacing: 1px;
+}
+
+.city-weather .condition {
+    display: flex;
+    align-items: center;
+}
+
+.city-weather .min-max {
+    display: flex;
+    gap: 2rem;
+}
+
+.city-weather .min-max p {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.city-weather .min-max p .icon {
+    font-weight: 100;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.city-weather .details {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.city-weather .details .rows .row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.7rem;
+}
+
+.boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+.box {
+    text-align: center;
+    border-radius: .5rem;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+    main {
+        margin: 1rem 2rem;
+    }
+
+    section.head form {
+        flex-direction: column;
+    }
+
+    form .search {
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+    }
+
+    section.head form .unit {
+        flex-basis: 100%;
+        border-left: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        margin: 1rem 4rem;
+    }
+
+    .city-weather {
+        flex-direction: column;
+    }
+
+    .content .city-weather .general {
+        flex-basis: 100%;
+    }
+
+    .city-weather .details {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    main {
+        margin: 1rem 4rem;
+    }
+}

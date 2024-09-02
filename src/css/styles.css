@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #145aaf;
+    --font-family: 'Handjet', sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background: url('../assets/sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.4rem;
+}
